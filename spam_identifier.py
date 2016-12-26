@@ -1,6 +1,7 @@
 import soundcloud
 client = soundcloud.Client(client_id='fDoItMDbsbZz8dY16ZzARCZmzgHBPotA')
-user = client.get('/resolve', url='http://soundcloud.com/yungoffline')
+username = input("What is the url for your profile? ")
+user = client.get('/resolve', url=username)
 tracks = client.get('/users/' +str(user.id) + '/tracks')
 spam_count = 0
 total_comments = 0
